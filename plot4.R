@@ -44,5 +44,5 @@ legend("topright", col=c("black", "red", "blue"), lty=1, lwd=2,bty="n",legend=c(
 #4th plot
 with(sub2,plot(Date,Global_reactive_power, type="l",ylab="Global_reactive_power", xlab="dastatime"))
 
-png("plot4.png", width=480, height=480)
+dev.copy(png,"plot4.png", width=480, height=480)#saving plot1.png
 dev.off()

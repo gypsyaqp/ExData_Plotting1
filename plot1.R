@@ -20,5 +20,5 @@ for (i in 1:9){
 sub2<-subset(sub,dmy(sub$Date)>=dmy("1/2/2007") & dmy(sub$Date)<=dmy("2/2/2007"))
 #histogram
 with(sub2,hist(as.numeric(Global_active_power),main="Global Active Power",col = "red",xlab="Global Active Power(Kilowatts"))
-png("plot1.png", width=480, height=480)#saving plot1.png
+dev.copy(png,"plot1.png", width=480, height=480)#saving plot1.png
 dev.off()

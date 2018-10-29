@@ -32,5 +32,5 @@ sub2$Date<- paste(dmy(sub2$Date), sub2$Time)#join in one column date and time
 sub2$Date <- as.POSIXct(sub11$Date)
 
 with(sub2,plot(Date,Global_active_power, type="l",ylab="Global Active Power (kilowatts)", xlab=""))
-png("plot2.png", width=480, height=480)
+dev.copy(png,"plot2.png", width=480, height=480)#saving plot1.png
 dev.off()
